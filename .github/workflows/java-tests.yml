@@ -27,3 +27,9 @@ jobs:
 
       - name: Run tests with Maven
         run: mvn -B test
+    
+      - name: Run Tests
+        run: mvn test -Dspring.profiles.active=test
+
+      - name: Display Test Results
+        run: cat target/surefire-reports/*.txt
