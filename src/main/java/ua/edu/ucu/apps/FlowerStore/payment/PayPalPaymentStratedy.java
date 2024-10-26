@@ -2,8 +2,10 @@ package ua.edu.ucu.apps.FlowerStore.payment;
 
 import java.util.List;
 
+import lombok.Getter;
 import ua.edu.ucu.apps.FlowerStore.flower.Item;
 
+@Getter
 public class PayPalPaymentStratedy implements Payment{
     private String name;
     private String description;
