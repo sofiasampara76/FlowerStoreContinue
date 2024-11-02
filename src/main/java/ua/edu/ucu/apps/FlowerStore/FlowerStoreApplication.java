@@ -11,3 +11,14 @@ public class FlowerStoreApplication {
 	}
 
 }
+
+//heroku create
+//git push heroku main
+//зайти за посиланням 
+
+
+//heroku  сайт 
+//resources додати базу даних
+//heroku postgress
+//add ones-
+//Attached to database 
