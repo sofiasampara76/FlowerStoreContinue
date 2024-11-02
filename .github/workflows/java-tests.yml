@@ -21,6 +21,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      
+      - name: Clean and test with Maven
+        run: mvn clean test -Dspring.profiles.active=test
 
       - name: Run tests with Maven in test profile
         run: mvn -B test -Dspring.profiles.active=test
