@@ -22,14 +22,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build with Maven
-        run: mvn -B clean compile
-
-      - name: Run tests with Maven
-        run: mvn -B test
-    
-      - name: Run Tests
-        run: mvn test -Dspring.profiles.active=test
-
-      - name: Display Test Results
-        run: cat target/surefire-reports/*.txt
+      - name: Run tests with Maven in test profile
+        run: mvn -B test -Dspring.profiles.active=test
