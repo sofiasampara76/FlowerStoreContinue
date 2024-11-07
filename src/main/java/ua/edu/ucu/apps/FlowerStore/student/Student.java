@@ -18,7 +18,7 @@ import lombok.Setter;
 @Entity
 public class Student {
     @Id
-    private Long Id;
+    private Long id;
 
     @Column(unique = true)
     private String email;
@@ -38,5 +38,15 @@ public class Student {
     public int getAge() {
         LocalDate currentDate = LocalDate.now();
         return Period.between(this.dob, currentDate).getYears();
+    }
+
+    public void setAge(int age) {
+        if (age > this.age) {
+            LocalDate currentDate = LocalDate.now();
+            this.dob = currentDate.minusYears(age);
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
     }
 }

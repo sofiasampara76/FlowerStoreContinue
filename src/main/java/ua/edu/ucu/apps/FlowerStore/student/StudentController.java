@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class StudentController {
     private final StudentService studentService;
 
-    @Autowired //для того, щоб зв'язати флаверсервіс з флавер контроллером (рівні архітектури)
+    @Autowired
 	public StudentController(StudentService studentService) {
 		this.studentService = studentService;
 	}

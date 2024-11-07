@@ -1,12 +1,13 @@
-GET http://localhost:8080/flower
+GET http://localhost:8080/student
 
 ###
-POST http://localhost:8080/flower
+POST http://localhost:8080/student
 Content-Type: application/json
 
 {
-  "sepalLength": 100,
-  "type": "TULIP",
-  "price": 100,
-  "id": 1
+  "name": "Romka",
+  "gender": "male",
+  "email": "romka@email.com",
+  "id": 2,
+  "dob": "2006-06-09"
 }
